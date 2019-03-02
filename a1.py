@@ -1,18 +1,19 @@
 print("A plain carbon steel of grade 45c8(σyt) is subjected to tensile load F (in N)."
       " Calculate the diameter of rod using safety of factor FOS ")
 
+import math
+
 F = float(input('F = '))
 FOS = int(input('FOS = '))
-σyt = float(input('σyt = ')) 
+σyt = float(input('σyt = '))
 pi = 22/7
 σ = (σyt/FOS)
-unit = "N/mm2"
-print('Working Stress = ',σ,unit)
+unit_a = "N/mm2"
+unit_b = "mm"
+print('Working Stress = ',σ,unit_a)
 d2 = ((F*4)/(pi*σ))
 da = math.sqrt(d2)
-d = (round(da))
-print("diameter of rod = ",d,unit)
-
+print("diameter of rod = ",'%.2f'%da,unit_b)
 if 20.1<da<24.99:
     print("Size of shaft = 25mm")
 elif 25.1<da<29.99:

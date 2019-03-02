@@ -1,11 +1,11 @@
-print("A plain carbon steel of grade 45c8(σyt) is subjected to tensile load F (in N)."
+print("A plain carbon steel of grade 45c8(σyt = 360 N/mm2) is subjected to tensile load F (in N)."
       " Calculate the diameter of rod using safety of factor FOS ")
 
 import math
 
-F = float(input('F = '))
+F = float(input('F = ')) 
 FOS = int(input('FOS = '))
-σyt = float(input('σyt = '))
+σyt = float(input('σyt = ')) # σyt = Yield points stress in tension
 pi = 22/7
 σ = (σyt/FOS)
 unit_a = "N/mm2"
